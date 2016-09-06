@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>详情页</title>
+		<!-- Bootstrap -->
+		<link href="css/bootstrap.min.css" rel="stylesheet">
+		<!--你自己的样式文件 -->
+		<link href="css/mystyle.css" rel="stylesheet">
+    </head>
+    <body>
+		<!-- 导航1 -->
+        <nav class="navbar navbar-inverse noRadius " role="navigation">
+            <!-- 搜索 -->
+            <form class="navbar-form navbar-left leftMargin" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="请输入搜索关键字">
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+            <!-- 登陆 -->
+            <div>
+                <ul class="nav navbar-nav navbar-right rightMargin">
+                    <li><a href="login.html">登陆</a></li>
+                    <li><a href="register.html">注册</a></li>
+                </ul>
+            </div>
+        </nav>
+		<!-- 导航2 -->
+        <nav class="navbar navbar-default  whiteBg noBorder" role="navigation">
+            <div class="navbar-header leftMargin">
+                <a href="index.html"><img src="images/logo.png"></a>
+            </div>
+            <div>
+                <ul class="nav navbar-nav navbar-right rightMargin">
+                    <li><a href="index.html">首页</a></li>
+                    <li class="dropdown">
+                        <a href="single.html" class="dropdown-toggle" data-toggle="dropdown">女装</a>
+                        <ul class="dropdown-menu">
+                            <li role="presentation" class="dropdown-header">上衣</li>
+                            <li><a href="products.html">羽绒服</a></li>
+                            <li><a href="products.html">棉服</a></li>
+                            <li><a href="products.html">马甲</a></li>
+                            <li class="divider"></li>
+                            <li role="presentation" class="dropdown-header">裤子</li>
+                            <li><a href="products.html">打底裤</a></li>
+                            <li><a href="products.html">牛仔裤</a></li>
+                            <li><a href="products.html">灯笼裤</a></li>
+                            <li class="divider"></li>
+                            <li role="presentation" class="dropdown-header">鞋子</li>
+                            <li><a href="products.html">高跟鞋</a></li>
+                            <li><a href="products.html">雪地靴</a></li>
+                            <li><a href="products.html">运动鞋</a></li>
+                            <li class="divider"></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="products.html" class="dropdown-toggle" data-toggle="dropdown">男装</a>
+                        <ul class="dropdown-menu">
+                            <li role="presentation" class="dropdown-header">上衣</li>
+                            <li><a href="products.html">羽绒服</a></li>
+                            <li><a href="products.html">棉服</a></li>
+                            <li><a href="products.html">马甲</a></li>
+                            <li class="divider"></li>
+                            <li role="presentation" class="dropdown-header">裤子</li>
+                            <li><a href="products.html">运动裤</a></li>
+                            <li><a href="products.html">牛仔裤</a></li>
+                            <li><a href="products.html">洞洞裤</a></li>
+                            <li class="divider"></li>
+                            <li role="presentation" class="dropdown-header">鞋子</li>
+                            <li><a href="products.html">皮鞋</a></li>
+                            <li><a href="products.html">布鞋</a></li>
+                            <li><a href="products.html">运动鞋</a></li>
+                            <li class="divider"></li>
+                        </ul>
+                    </li>
+                    <li><a href="checkout.html">购物车</a></li>
+                    <li><a href="#">购物数量</a></li>
+                    <li><a href="#">清空购物车</a></li>
+                </ul>
+            </div>
+        </nav>
+		<hr class="newHr ">
+		<!-- 商品列表 -->
+        <div class="container addTop">
+            <div class="row">
+                <!-- 左侧查找栏 -->
+                <div class="col-md-3">
+                    <h3 class="addSubline addBotm">种类</h3>
+                    <h4  id="women" class="listToggle ">女装</h4>
+                    <ul  id="womenCloth" class=" nav nav-pills nav-stacked  " style="display: none;">
+                        <li><a href="products.html">淘宝风</a></li>
+                        <li><a href="products.html">小清新</a></li>
+                        <li><a href="products.html">御姐</a></li>
+                        <li><a href="products.html">网红</a></li>
+                    </ul>
+                    <h4 id="men" class="listToggle cloth">男装</h4>
+                    <ul  id="menCloth" class=" nav nav-pills nav-stacked reAColor clothes" style="display: none;">
+                        <li><a href="products.html">淘宝风</a></li>
+                        <li><a href="products.html">小清新</a></li>
+                        <li><a href="products.html">御姐</a></li>
+                        <li><a href="products.html">网红</a></li>
+                    </ul>
+                    <h4 id="child" class="listToggle cloth">童装</h4>
+                    <ul  id="childCloth" class=" nav nav-pills nav-stacked reAColor clothes" style="display: none;">
+                        <li><a href="products.html">淘宝风</a></li>
+                        <li><a href="products.html">小清新</a></li>
+                        <li><a href="products.html">御姐</a></li>
+                        <li><a href="products.html">网红</a></li>
+                    </ul>
+                    <h4 id="shoe" class="listToggle cloth">鞋子</h4>
+                    <ul  id="shoes" class=" nav nav-pills nav-stacked reAColor clothes" style="display: none;">
+                        <li><a href="products.html">淘宝风</a></li>
+                        <li><a href="products.html">小清新</a></li>
+                        <li><a href="products.html">御姐</a></li>
+                        <li><a href="products.html">网红</a></li>
+                    </ul>
+                    <img src="images/product1.jpg" class="addTopMin">
+                    <!-- 标签 -->
+                    <h3 class="addSubline addBotm">标签</h3>
+                    <div class="btnGroup addBotm">
+                        <button type="button" class="btn btn-default noRadius">时尚</button>
+                        <button type="button" class="btn btn-default noRadius">复古</button>
+                        <button type="button" class="btn btn-default noRadius">朋克</button>
+                        <button type="button" class="btn btn-default noRadius">二缺</button>
+                        <button type="button" class="btn btn-default noRadius">哈哈</button>
+                        <button type="button" class="btn btn-default noRadius">折扣</button>
+                        <button type="button" class="btn btn-default noRadius">包邮</button>
+                        <button type="button" class="btn btn-default noRadius">品牌</button>
+                        <button type="button" class="btn btn-default noRadius">热销</button>
+                        <button type="button" class="btn btn-default noRadius">反季</button>
+                        <button type="button" class="btn btn-default noRadius">排行</button>
+                        <button type="button" class="btn btn-default noRadius">小公举</button>
+                        <button type="button" class="btn btn-default noRadius">撩妹</button>
+                        <button type="button" class="btn btn-default noRadius">撩汉</button>
+                        <button type="button" class="btn btn-default noRadius">好基友</button>
+                    </div>
+                    <!-- 销量榜 -->
+                    <h3 class="addSubline addBotm">销量榜</h3>
+                    <div class="topSale addBotm">
+                        <img src="images/p1.jpg">
+                        <p>超大号草帽，<br/>农民伯伯的最爱</p>
+                        <h3>￥10.0</h3>
+                    </div>
+                    <div class="topSale addBotm">
+                        <img src="images/p2.jpg">
+                        <p>蓝色妖姬<br/>窗帘的一角</p>
+                        <h3>￥99.8</h3>
+                    </div>
+
+                    <div class="salePic addTop">
+                        <img src="images/pro.jpg">
+                        <h2>跳楼大甩卖</h2>
+                        <p>5-7折</p>
+                    </div>
+
+                </div>
+                <!--右侧详情栏-->
+                <div class=" col-md-offset-1 col-md-8">
+                    <div class="row">
+                        <div id="myCarousel" class=" col-md-5 carousel slide">
+                            <!-- 轮播（Carousel）指标 -->
+                            <ol class="carousel-indicators rePos">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="1" ></li>
+                                <li data-target="#myCarousel" data-slide-to="2"></li>
+                            </ol>
+                            <!-- 轮播（Carousel）项目 -->
+                            <div class="carousel-inner addBorder ">
+                                <div class="item active">
+                                    <img src="images/si1.jpg" alt="First slide">
+
+                                </div>
+                                <div class="item">
+                                    <img src="images/si2.jpg" alt="Second slide">
+
+                                </div>
+                                <div class="item">
+                                    <img src="images/si.jpg" alt="Third slide">
+
+                                </div>
+                            </div>
+                            <!-- 轮播控制-->
+
+                            <div class="circlePic">
+                                <img class="slide-one" src="images/si1.jpg" >
+                                <img class="slide-two" src="images/si2.jpg" >
+                                <img class="slide-three" src="images/si.jpg" >
+                            </div>
+                        </div>
+
+
+                        <div class="col-md-7">
+                            <h1 class="addBotm">连衣裙</h1>
+
+                            <div class="commentStar">
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <h4><a href="#" >一个评论</a></h4>
+                            <h2 class="reColor">￥95.0</h2>
+                            <hr>
+                            <p class="addBotm"><b>描述：</b>哼哼哈嘿红红火火恍恍惚惚含含糊糊哈</p>
+
+                            <form class="form-horizontal addTop" role="form">
+                                <div class="form-group">
+                                    <label  class="col-sm-2 control-label">颜色</label>
+                                    <div class="col-sm-10">
+                                        <select class="form-control col-md-10">
+                                            <option>大红</option>
+                                            <option>藏青</option>
+                                            <option>黑色</option>
+                                            <option>深绿</option>
+                                            <option>天蓝</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label  class="col-sm-2 control-label">号码</label>
+                                    <div class="col-sm-10">
+                                        <select class="form-control col-md-10">
+                                            <option>XXL</option>
+                                            <option>XL</option>
+                                            <option>L</option>
+                                            <option>M</option>
+                                            <option>L</option>
+                                            <option>XL</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="  col-md-3 ">
+                                    <button type="submit" class="btn btn-danger">加入购物车</button>
+                                </div>
+                                <div class="col-md-offset-2 col-md-4 ">
+                                    <button type="submit" class="btn btn-danger">直接购买</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <!--商品描述-->
+                    <div class="row addTop addBotm">
+                        <ul class="nav nav-tabs nav-justified ">
+                            <li class="active" id="selec1"><a href="javascript:;">商品介绍</a></li>
+                            <li id="selec2"><a href="javascript:;" >商品细节</a></li>
+                            <li id="selec3"><a href="javascript:;">买家评论</a></li>
+                        </ul>
+
+                    </div>
+                    <div class="selecSingle addBotm">
+                        <p id="selec01">哼哼哈嘿红红火火恍恍惚惚含含糊糊哈哼哼哈嘿红红火火恍恍惚惚含含糊糊哈哼哼哈嘿红红火火恍恍惚惚含含糊糊哈哼哼哈嘿红红火火恍恍惚惚含含糊糊哈哼哼哈嘿红红火火恍恍惚惚含含糊糊哈哼哼哈嘿红红火火恍恍惚惚含含糊糊哈哼哼哈嘿红红火火恍恍惚惚含含糊糊哈</p>
+                        <div id="selec02">
+                            <p><b>颜色：</b>红色、蓝色、深绿色</p>
+                            <p><b>型号：</b>X、M 、S</p>
+                        </div>
+                        <div id="selec03">
+                            <p><b>手剁了还会长：</b>非常漂亮！宝宝很喜欢！</p>
+                            <p><b>我的老公是马云：</b>老公送的，虽然有点烂大街，不过我很喜欢！老公么么哒~</p>
+                            <button type="button" class="btn btn-danger noRadius ">添加评论</button>
+                        </div>
+                    </div>
+                    <!--同类推荐-->
+                    <h2 class="addTop addBotm ">同类商品推荐</h2>
+                    <div class="row">
+                        <div class="col-sm-6 col-md-4">
+                            <a href="#" class="thumbnail">
+                                <img src="images/pi1.jpg"
+                                     alt="通用的占位符缩略图">
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <a href="#" class="thumbnail">
+                                <img src="images/pi2.jpg"
+                                     alt="通用的占位符缩略图">
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-md-4">
+                            <a href="#" class="thumbnail">
+                                <img src="images/pi3.jpg"
+                                     alt="通用的占位符缩略图">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row text-center rePage">
+                <ul class="pagination">
+                    <li><a href="#">&laquo;</a></li>
+                    <li><a href="#">1</a></li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">4</a></li>
+                    <li><a href="#">5</a></li>
+                    <li><a href="#">&raquo;</a></li>
+                </ul>
+            </div>
+        </div>
+		<!-- 底部 -->
+        <div class="container bottomBg fullWidth leftPad100">
+            <div class="row bottom ">
+                <div class="col-md-4">
+                    <h3>更多信息</h3>
+                    <ul class="nav nav-pills nav-stacked ">
+                        <li><a href="#">如何购买</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">位置</a></li>
+                        <li><a href="#">成为会员</a></li>
+                        <li><a class="addBotm" href="#">呵呵</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>联系我们</h3>
+                    <p>地址:银河星系蓝星亚洲华夏帝都</p>
+                </div>
+                <div class="col-md-4">
+                    <h3>买家注意</h3>
+                    <p>注册获取更多消息</p>
+                    <a href="register.html" class="btn btn-danger">注册</a>
+                </div>
+            </div>
+        </div>
+		<!-- 最底部 -->
+        <div class="copyRight">
+            <p>Copyright © 2015.Company name All rights reserved.More Templates 模板之家 -                      Collect from 网页模板</p>
+        </div>
+        <script>
+            //下拉菜单
+            var women=document.getElementById('women');
+            var men=document.getElementById('men');
+            var child=document.getElementById('child');
+            var shoe=document.getElementById('shoe');
+            function downmenu(obj){
+                if(obj.style.display=='none'){
+                    obj.style.display='block';
+                }else{
+                    obj.style.display='none';
+                }
+            }
+            women.onclick=function(){
+                var womenCloth=document.getElementById('womenCloth');
+                downmenu(womenCloth);
+            }
+            men.onclick=function(){
+                var menCloth=document.getElementById('menCloth');
+                downmenu(menCloth);
+            }
+            child.onclick=function(){
+                var childCloth=document.getElementById('childCloth');
+                downmenu(childCloth);
+            }
+            shoe.onclick=function(){
+                var shoes=document.getElementById('shoes');
+                downmenu(shoes);
+            }
+
+
+            //选项卡功能
+            var selec1=document.getElementById('selec1');
+            var selec2=document.getElementById('selec2');
+            var selec3=document.getElementById('selec3');
+            var selec01=document.getElementById('selec01');
+            var selec02=document.getElementById('selec02');
+            var selec03=document.getElementById('selec03');
+            selec2.onclick=function(){
+                selec01.style.display='none';
+                selec03.style.display='none';
+                selec02.style.display='block';
+                selec1.className='';
+                selec3.className='';
+                selec2.className='active';
+            }
+            selec3.onclick=function(){
+                selec01.style.display='none';
+                selec02.style.display='none';
+                selec03.style.display='block';
+                selec1.className='';
+                selec2.className='';
+                selec3.className='active';
+            }
+            selec1.onclick=function(){
+                selec02.style.display='none';
+                selec03.style.display='none';
+                selec01.style.display='block';
+                selec2.className='';
+                selec3.className='';
+                selec1.className='active';
+            }
+
+        </script>
+
+        <!-- 如果要使用Bootstrap的js插件，必须先调入jQuery -->
+        <script src="./js/jquery-1.11.3.js"></script>
+        <!-- 包括所有bootstrap的js插件或者可以根据需要使用的js插件调用　-->
+        <script src="./js/bootstrap.min.js"></script>
+        <script>
+            $('#myCarousel').carousel({
+                interval: 2000
+            })
+            $(".slide-one").click(function(){
+                $("#myCarousel").carousel(0);
+            });
+            $(".slide-two").click(function(){
+                $("#myCarousel").carousel(1);
+            });
+            $(".slide-three").click(function(){
+                $("#myCarousel").carousel(2);
+            });
+        </script>
+    </body>
+</html>
